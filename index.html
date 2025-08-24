@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTX 5070 Ti - Tout savoir</title>
+  <style>
+    /* --- GLOBAL --- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+    }
+    a { color: #22c55e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* --- SIDEBAR --- */
+    #sidebar {
+      width: 250px;
+      background: #1e293b;
+      padding: 80px 20px 20px 20px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      overflow-y: auto;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+      box-shadow: 3px 0 10px rgba(0, 255, 100, 0.3);
+      z-index: 900;
+    }
+    #sidebar.active { transform: translateX(0); }
+    #sidebar h2 {
+      color: #22c55e;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      text-shadow: 0 0 5px #22c55e, 0 0 10px #16a34a;
+    }
+    #sidebar ul { list-style: none; padding: 0; }
+    #sidebar li { margin: 15px 0; font-size: 1.1rem; }
+    #sidebar li a { display: block; padding: 10px; border-radius: 6px; transition: 0.3s; }
+    #sidebar li a:hover { background: #334155; box-shadow: 0 0 10px #22c55e; }
+
+    /* --- TOGGLE BUTTON --- */
+    #toggle-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      background: #22c55e;
+      border: none;
+      color: white;
+      font-weight: bold;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1000;
+      transition: 0.3s;
+      box-shadow: 0 0 8px #22c55e, 0 0 12px #16a34a;
+    }
+    #toggle-btn:hover { background: #16a34a; box-shadow: 0 0 15px #22c55e, 0 0 25px #16a34a; }
+
+    /* --- MAIN CONTENT --- */
+    #content {
+      flex: 1;
+      padding: 120px 40px 40px 40px;
+      max-width: 900px;
+      margin: auto;
+      z-index: 1;
+    }
+    section { display: none; margin-bottom: 40px; font-size: 1.15rem; line-height: 1.6rem; }
+    section.active { display: block; }
+    h1, h2 { color: #22c55e; text-shadow: 0 0 8px #22c55e, 0 0 15px #16a34a; }
+
+    /* --- LINK BUTTON --- */
+    .highlight-link {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      margin: 1rem 0;
+      background: #22c55e;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 0 10px #22c55e, 0 0 20px #16a34a;
+    }
+    .highlight-link:hover { background: #16a34a; box-shadow: 0 0 20px #22c55e, 0 0 30px #16a34a; }
+
+    /* --- TABLE --- */
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; box-shadow: 0 0 12px rgba(34, 197, 94, 0.3); }
+    th, td { border: 1px solid #334155; padding: 10px; text-align: left; }
+    th { background: #1e293b; }
+  </style>
+</head>
+<body>
+  <button id="toggle-btn">☰ Menu</button>
+  <div id="sidebar">
+    <h2>RTX 5070 Ti</h2>
+    <ul>
+      <li><a href="#" onclick="showSection('intro')">Présentation</a></li>
+      <li><a href="#" onclick="showSection('specs')">Caractéristiques</a></li>
+      <li><a href="#" onclick="showSection('bench')">Benchmarks</a></li>
+      <li><a href="#" onclick="showSection('prix')">Prix & Disponibilité</a></li>
+      <li><a href="#" onclick="showSection('avis')">Avis & Conclusion</a></li>
+    </ul>
+    <a href="https://exemple.com" class="highlight-link" target="_blank">Lien important 🔗</a>
+  </div>
+  <div id="content">
+    <section id="intro" class="active">
+      <h1>Présentation de la RTX 5070 Ti</h1>
+      <p>La <strong>GeForce RTX 5070 Ti</strong> est une carte graphique de la génération Ada Lovelace++. Conçue pour les joueurs exigeants et les créateurs de contenu, elle offre un rapport performance/prix impressionnant, tout en consommant moins d’énergie que la génération précédente.</p>
+    </section>
+    <section id="specs">
+      <h2>Caractéristiques techniques</h2>
+      <table>
+        <tr><th>GPU</th><td>Ada Lovelace++ (5 nm)</td></tr>
+        <tr><th>Mémoire</th><td>16 Go GDDR7</td></tr>
+        <tr><th>Fréquence boost</th><td>2.9 GHz</td></tr>
+        <tr><th>Ray Tracing</th><td>3ème génération</td></tr>
+        <tr><th>DLSS</th><td>DLSS 4.0</td></tr>
+        <tr><th>Consommation</th><td>250W</td></tr>
+      </table>
+    </section>
+    <section id="bench">
+      <h2>Benchmarks en jeu</h2>
+      <p>Voici quelques résultats de performances (résolution 1440p Ultra) :</p>
+      <ul>
+        <li>Cyberpunk 2077 : 120 FPS (DLSS activé)</li>
+        <li>Fortnite : 280 FPS</li>
+        <li>GTA VI : 160 FPS</li>
+        <li>Microsoft Flight Simulator 2024 : 95 FPS</li>
+      </ul>
+    </section>
+    <section id="prix">
+      <h2>Prix & Disponibilité</h2>
+      <p>La RTX 5070 Ti est proposée à un prix de lancement d’environ <strong>699 €</strong>. Disponible chez les principaux revendeurs (LDLC, Amazon, Materiel.net…).</p>
+    </section>
+    <section id="avis">
+      <h2>Avis & Conclusion</h2>
+      <p>La RTX 5070 Ti est un excellent choix pour les joueurs en 1440p ou même en 4K. Son efficacité énergétique et ses performances la placent comme une des meilleures options de sa génération.</p>
+      <p><em>Si tu veux suivre les dernières promos, clique sur le bouton dans la barre à gauche 😉</em></p>
+    </section>
+  </div>
+  <script>
+    const toggleBtn = document.getElementById("toggle-btn");
+    const sidebar = document.getElementById("sidebar");
+    toggleBtn.addEventListener("click", () => { sidebar.classList.toggle("active"); });
+    function showSection(id) { document.querySelectorAll("section").forEach(sec => sec.classList.remove("active")); document.getElementById(id).classList.add("active"); sidebar.classList.remove("active"); }
+  </script>
+</body>
+</html>
